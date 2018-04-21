@@ -54,7 +54,7 @@
       <text class='sign-label'>我要报名</text>
     </view>
     <view class='tip-btn' wx:elif="{{hasSignedUp && (participant.status == 2)}}">
-      <text class='tip-label'>申请退款中</text>
+      <text class='tip-label'>取消申请中</text>
     </view>
     <view class='sign-btn' wx:elif="{{activity.chargeType == 0 || hasPaid}}" bindtap='bindCancelBtnTap' data-id="{{activity.id}}">
       <text class='sign-label'>取消报名</text>

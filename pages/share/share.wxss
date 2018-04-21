@@ -24,11 +24,12 @@ text{
   font-weight: 500;
   line-height: 1;
 }
+
 .title{
   display: block;
   margin: 80rpx auto 60rpx auto;
-  width: 450rpx;
-  height: 444rpx;
+  width: 405rpx;
+  height: 400rpx;
 }
 
 .name{
@@ -50,7 +51,7 @@ text{
 
 .number{
   font-size: 48rpx;
-  margin-bottom: 80rpx;
+  margin-bottom: 60rpx;
 }
 
 .info{
@@ -116,4 +117,14 @@ text{
   right: 0;
   bottom: 180rpx;
   text-align: center;
+}
+
+.go-back{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
 }

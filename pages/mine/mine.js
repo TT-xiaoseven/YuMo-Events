@@ -2,6 +2,8 @@
 //获取应用实例
 
 //activityStatus  0:未开始  1:已结束
+//participant.status  等待支付是0，已经支付是1，申请退款是2，已经退款是3
+
 const app = getApp()
 const mineUrl = require('../../config').mineUrl
 var tabBar = require('../templates/templates.js');
@@ -22,17 +24,17 @@ Page({
   },
 
   /**
-   * 近期活动
+   * 查看活动
    */
   bindEventsBtnTap: function (event) {
     var participant = event.currentTarget.dataset.participant
-    if (participant.activity.chargeType == 0 || participant.hasPaid) {
-      wx.navigateTo({
-        url: '../share/share?participantId=' + participant.id
-      })
-    } else {
+    if (participant.status == 0) {
       wx.navigateTo({
         url: '../pay/pay?id=' + participant.id + '&price=' + participant.activity.activityFee
+      })
+    } else if (participant.status == 1){
+      wx.navigateTo({
+        url: '../share/share?participantId=' + participant.id
       })
     }
   },

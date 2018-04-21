@@ -173,5 +173,14 @@ Page({
     this.setData({
       dinnerItems: items
     });
+  },
+
+  /**
+  * 返回活动主页
+  */
+  bindGoBackBtn: function (e) {
+    wx.navigateBack({
+      delta: 100
+    })    
   }
 })

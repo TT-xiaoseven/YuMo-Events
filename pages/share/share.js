@@ -68,5 +68,14 @@ Page({
       desc: '',
       path: '/pages/share/share?participantId=' + this.data.participant.id
     }
+  },
+
+  /**
+  * 返回活动主页
+  */
+  bindGoBackBtn: function (e) {
+    wx.navigateBack({
+      delta: 100
+    })      
   }
 })

@@ -28,8 +28,10 @@
         <view class='status-finished' wx:elif="{{item.activity.status == 1}}">
           <text>已结束</text>
         </view>
-        <text class='price' wx:if="{{item.activity.chargeType == 0}}">免费</text>    
-        <text class='price' wx:elif="{{item.activity.chargeType != 0}}">¥{{item.activity.activityFee}}</text>  
+        <text class='price' wx:if="{{item.status == 0}}">等待支付</text>   
+        <text class='normal' wx:elif="{{item.status == 1}}">已报名</text> 
+        <text class='normal' wx:elif="{{item.status == 2}}">取消申请中</text>  
+        <text class='cancel' wx:elif="{{item.status == 3}}">已取消</text>  
       </view>
       <view class='logo-box' wx:if="{{index == participants.length - 1}}">
         <image class='logo-bottom' src='../images/logo_bottom.png'></image>

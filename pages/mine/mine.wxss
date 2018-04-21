@@ -232,6 +232,30 @@ page{
   text-align: right;
 }
 
+.status-box .normal{
+  float: right;
+  width: 200rpx;
+	height: 19rpx;
+	font-size: 24rpx;
+	line-height: 20px;
+	color: #606166;
+  margin-right: 20rpx;
+  margin-top: 16rpx;
+  text-align: right;
+}
+
+.status-box .cancel{
+  float: right;
+  width: 200rpx;
+	height: 19rpx;
+	font-size: 24rpx;
+	line-height: 20px;
+	color: #9b9ea3;
+  margin-right: 20rpx;
+  margin-top: 16rpx;
+  text-align: right;
+}
+
 .item .logo-box{
   width: 100%;
   height: 70rpx;

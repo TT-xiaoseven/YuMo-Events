@@ -39,6 +39,7 @@ page{
 
 .item-box .price-icon{
   margin-left: 30rpx;
+  margin-bottom: 30rpx;
   font-size: 60rpx;
   color: #333333;
   font-weight: bold;
@@ -82,3 +83,13 @@ page{
 .btn:active{
   background: #79611e;
 }
+
+.go-back{
+  font-size: 28rpx;
+  color: #8f7e4f;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+}
+

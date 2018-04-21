@@ -198,3 +198,12 @@ radio-group label text{
   width: 197rpx;
 	height: 70rpx;
 }
+
+.go-back{
+  font-size: 28rpx;
+  color: #8f7e4f;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+}

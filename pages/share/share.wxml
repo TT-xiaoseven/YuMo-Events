@@ -19,6 +19,7 @@
       <text class='info'>活动时间：</text>
       <text class='info'>{{activity.startTime}}</text> 
     </view>
+    <text class='go-back' bindtap='bindGoBackBtn'>查看更多活动</text>
     <image class="logo" src="../images/logo_bottom.png"></image>
     <image class="corner_1" src="../images/inition_corner_1.png"></image>
     <image class="corner_2" src="../images/inition_corner_2.png"></image>

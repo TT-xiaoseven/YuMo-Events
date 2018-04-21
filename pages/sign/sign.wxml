@@ -57,6 +57,7 @@
     </view>
     <button class='btn' formType="submit">立即报名</button>
   </form>
+  <text class='go-back' bindtap='bindGoBackBtn'>返回活动主页</text>
   <view class='logo-box'>
     <image class='logo-bottom' src='../images/logo_bottom_deep.png'></image>
   </view>

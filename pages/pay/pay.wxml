@@ -10,5 +10,6 @@
     <!-- <text class='detail'>收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准</text> -->
   </view>
   <button class='btn' bindtap="requestPayment" loading="{{loading}}">立即付款</button>
+  <text class='go-back' bindtap='bindGoBackBtn'>返回活动主页</text>
 </view>
 
