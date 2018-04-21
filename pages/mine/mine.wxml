@@ -1,0 +1,44 @@
+<!--pages/mine/mine.wxml-->
+<import src="../templates/templates.wxml"/>
+<scroll-view scroll-y class="{{isIpx?'mine-ipx':'mine'}}" hidden='{{!isLogin}}'>
+  <view class='info'>
+    <text class='nick-name'>{{userInfo.nickName}}</text>
+    <image class='head-img' src="{{(userInfo != null) ? userInfo.avatarUrl : '默认图片'}}"></image>
+  </view>
+  <view class='label'>
+    <view class='bold-line'></view>
+    <text class='tip'>我参加的活动</text>
+  </view>
+  <view class='items'>
+    <view class='item' wx:for="{{participants}}" bindtap='bindEventsBtnTap' data-participant="{{item}}">
+      <view class='events-box'>
+        <image class='poster' src='{{item.activity.titleImageUrl}}'></image> 
+        <view class='info-box'>
+          <text class='title'>{{item.activity.name}}</text>  
+          <text class='position'>{{item.activity.location}}</text>    
+          <text class='time' wx:if="{{item.activity.status == 0}}">{{item.activity.activityTime}}开始</text>
+          <text class='time' wx:elif="{{item.activity.status == 1}}">{{item.activity.activityTime}}</text>
+        </view>  
+      </view>
+      <view class='line'></view>
+      <view class='status-box'>
+        <view class='status-unstart' wx:if="{{item.activity.status == 0}}">
+          <text>未开始</text>
+        </view>
+        <view class='status-finished' wx:elif="{{item.activity.status == 1}}">
+          <text>已结束</text>
+        </view>
+        <text class='price' wx:if="{{item.activity.chargeType == 0}}">免费</text>    
+        <text class='price' wx:elif="{{item.activity.chargeType != 0}}">¥{{item.activity.activityFee}}</text>  
+      </view>
+      <view class='logo-box' wx:if="{{index == participants.length - 1}}">
+        <image class='logo-bottom' src='../images/logo_bottom.png'></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="{{isIpx?'tip-view-ipx':'tip-view'}}" hidden='{{isLogin}}'>
+  <image class='logo-tip' src='../images/logo_big.png'></image> 
+</view>
+<template is="tabBar" data="{{data:bindData}}"/>
+

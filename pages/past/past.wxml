@@ -1,0 +1,18 @@
+<!--pages/past/past.wxml-->
+<view class="past">
+  <view class='item' wx:for="{{activities}}" bindtap='bindItemBtnTap' data-url="{{item.activtyPageUrl}}">
+    <image class='poster' src='{{item.coverImageUrl}}'></image> 
+    <text class='title'>{{item.name}}</text> 
+    <view class='box'>
+      <view class='item1'>
+        <text class='position'>{{item.location}}</text>    
+        <text class='time'>{{item.startTime}}</text>
+      </view>
+      <view class='item2'>
+        <text class='num'>{{item.arrivedCount}}人</text>
+        <text class='label'>参与</text>
+      </view> 
+    </view>
+  </view>
+  <image class='logo-bottom' src='../images/logo_bottom.png'></image>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/share/share.wxml-->
+<view class="invitaton">
+  
+  <view class="box">
+    <image class="title" src="../images/inition_title.png"></image>
+    <text class='name'>{{participant.name}} {{participant.sex==1 ? '先生' : '女士'}}</text>
+    <text class='tip'>您好！已收到您的报名信息，诚挚的期待您光临！</text>  
+    <text class='tip'>您的报名号为</text>  
+    <text class='number'>{{participant.id}}</text>  
+    <view class='item'>
+      <text class='info'>活动主题：</text>
+      <text class='info'>{{activity.name}}</text> 
+    </view>
+    <view class='item' bindtap='bindLocationBtnTap' data-position='{{activity.position}}'>
+      <text class='info'>活动地址：</text>
+      <text class='address'>{{activity.location}}</text> 
+    </view>
+    <view class='item'>
+      <text class='info'>活动时间：</text>
+      <text class='info'>{{activity.startTime}}</text> 
+    </view>
+    <image class="logo" src="../images/logo_bottom.png"></image>
+    <image class="corner_1" src="../images/inition_corner_1.png"></image>
+    <image class="corner_2" src="../images/inition_corner_2.png"></image>
+    <image class="corner_3" src="../images/inition_corner_3.png"></image>
+    <image class="corner_4" src="../images/inition_corner_4.png"></image>
+  </view>
+
+</view>

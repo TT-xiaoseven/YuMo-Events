@@ -1,0 +1,84 @@
+/* pages/pay/pay.wxss */
+page{
+  background: #f8f4e8;
+}
+
+.pay{
+  -webkit-font-smoothing: antialiased;
+}
+
+.box{
+  background: #8f7e4f;
+  box-shadow: rgba(0,0,0,0.06) 0 2rpx 4rpx;
+  width: 690rpx;
+  margin: 30rpx 30rpx 0rpx 30rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.box .logo{
+  width: 145rpx;
+  height: 127rpx;
+  margin: 40rpx auto 40rpx auto;
+}
+
+.item-box{
+  background: #fff;
+  box-shadow: rgba(0,0,0,0.06) 0 2rpx 4rpx;
+  width: 690rpx;
+  margin: auto auto 60rpx auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-box .tip{
+  margin: 40rpx auto auto 30rpx;
+  font-size: 28rpx;
+  color: #888888;
+}
+
+.item-box .price-icon{
+  margin-left: 30rpx;
+  font-size: 60rpx;
+  color: #333333;
+  font-weight: bold;
+}
+
+.item-box .price{
+  margin-top: 30rpx;
+  font-size: 80rpx;
+  color: #333333;
+  font-weight: bold;
+}
+
+.item-box .line{
+	width: 630rpx;
+	height: 1rpx;
+	background-color: #f8f4e8;
+  margin-left: 30rpx;
+}
+
+.item-box .detail{
+  margin: 20rpx 30rpx 20rpx 30rpx;
+  font-size: 28rpx;
+  color: #888888;
+}
+
+.btn{
+  width: 540rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: block;
+  margin: 0 auto 30rpx auto;
+  text-align: center;
+  font-size: 34rpx;
+  background: #8f7e4f;
+  color: #fff;
+  box-shadow: 0px 2px 4px 0px 
+		rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
+}
+
+.btn:active{
+  background: #79611e;
+}

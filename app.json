@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/activity/activity",
+    "pages/mine/mine",
+    "pages/sign/sign",
+    "pages/share/share",
+    "pages/pay/pay",
+    "pages/info/info",
+    "pages/past/past",
+    "pages/logs/logs",
+    "pages/review/review",
+    "pages/fail/fail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8f7e4f",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#8f7e4f"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

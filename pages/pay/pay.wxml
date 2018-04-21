@@ -1,0 +1,14 @@
+<!--pages/pay/pay.wxml-->
+<view class='pay'>
+  <view class='box'>
+    <image class='logo' src='../images/logo_big.png'></image> 
+  </view>
+  <view class='item-box'>
+    <text class='tip'>支付金额</text>
+    <text class='price-icon'>¥ <text class='price'>{{price}}</text></text>
+    <!-- <view class='line'></view> -->
+    <!-- <text class='detail'>收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准收费标准</text> -->
+  </view>
+  <button class='btn' bindtap="requestPayment" loading="{{loading}}">立即付款</button>
+</view>
+

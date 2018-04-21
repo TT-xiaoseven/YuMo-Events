@@ -1,0 +1,260 @@
+/* pages/info/info.wxss */
+page{
+  background: #f8f4e8;
+}
+
+.info{
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+}
+
+.poster{
+  width: 750rpx;
+	height: 324rpx;
+}
+
+.info-box{
+	width: 750rpx;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 40px 0px 
+		rgba(0, 0, 0, 0.08);
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.info-box .title{
+  width: 690rpx;
+	font-size: 36rpx;
+  margin: 20rpx 30rpx 20rpx 30rpx;
+	color: #333333;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+	letter-spacing: 0px;
+}
+
+.view-box{
+  width: 690rpx;
+  height: 20rpx;
+  margin: 0rpx 30rpx 20rpx 30rpx;
+}
+
+.view-box .short-time{
+  width: 100rpx;
+	font-size: 22rpx;
+	line-height: 22rpx;
+	letter-spacing: 0px;
+	color: #9b9ea3;
+  float: left;
+}
+
+.view-box .view-icon{
+  float: right;
+  width: 24rpx;
+  height: 15rpx;
+  margin-right: 5rpx;
+  margin-top: 3rpx;
+}
+
+.view-box .view-num{
+  float: right;
+	font-size: 22rpx;
+	line-height: 22rpx;
+	letter-spacing: 0px;
+	color: #9b9ea3;
+}
+
+.long-line{
+	width: 100%;
+	height: 2rpx;
+	background-color: #f1f3f4;
+}
+
+.item-box{
+  width: 690rpx;
+  height: 70rpx;
+  margin-left: 30rpx; 
+  margin-right: 30rpx; 
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid #f1f3f4;
+}
+
+.item-box .normal-icon{
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.item-box .higher-icon{
+  width: 24rpx;
+  height: 29rpx;
+}
+
+.item-box .arrow-icon{
+  width: 14rpx;
+  height: 24rpx;
+  margin-left: 30rpx;
+}
+
+.item-box .label{
+  width: 607rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+	font-size: 26rpx;
+	color: #444444;
+  margin-left: 15rpx; 
+}
+
+.item-box .price-label{
+  width: 607rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+	font-size: 24rpx;
+	color: #fe6207;
+  margin-left: 15rpx; 
+}
+
+.description-label{
+  width: 690rpx;
+	font-size: 28rpx;
+	color: #666666;
+  margin-left: 15rpx; 
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+	letter-spacing: 0px;
+  margin: 20rpx 30rpx 10rpx 30rpx; 
+}
+
+.img-box{
+	width: 100%;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 40px 0px 
+		rgba(0, 0, 0, 0.08);
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.logo-box{
+  width: 100%;
+  height: 70rpx;
+  margin-top: 30rpx;
+  margin-bottom: 210rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-box .logo-bottom{
+  width: 197rpx;
+	height: 70rpx;
+}
+
+.button-box{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0rpx;
+}
+
+.button-box-ipx{
+  width: 100%;
+  height: 168rpx;
+  position: fixed;
+  bottom: 0rpx;
+}
+
+.share-btn{
+  float: left;
+  width: 320rpx;
+  height: 100%;
+  line-height: 100rpx;
+  border-style: none;
+  background: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 0;
+  color: #8f7e4f;
+}
+
+.share-btn::after {
+  border: 0;
+} 
+
+.share-btn:active{
+  background: #fdfaf0;
+}
+
+.icon-box{
+  width: 28rpx;
+  height: 96rpx;
+  display: flex;
+  align-items:center;
+  margin-right: 10rpx;
+}
+
+.icon-box .share-icon{
+  width: 28rpx;
+  height: 37rpx;
+}
+
+.icon-box .share-label{
+  width: 80rpx;
+	line-height: 100rpx;
+  text-align: center;
+	font-size: 34rpx;
+	letter-spacing: 0rpx;
+	
+  margin-left: 5rpx;
+}
+
+.tip-btn{
+  float: right;
+  width: 430rpx;
+  height: 100%;
+  background: #999999;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.tip-btn .tip-label{
+  width: 134rpx;
+	height: 33rpx;
+	font-size: 34rpx;
+	line-height: 0rpx;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+}
+
+.sign-btn{
+  float: right;
+  width: 430rpx;
+  height: 100%;
+  background: #8f7e4f;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.sign-btn:active{
+  background: #79611e;
+}
+
+.sign-btn .sign-label{
+  width: 134rpx;
+	height: 33rpx;
+	font-size: 34rpx;
+	line-height: 0rpx;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+}

@@ -1,0 +1,11 @@
+<template name="tabBar">
+  <view class="{{data.isIpx?'tabBar-ipx':'tabBar'}}">
+    <block wx:for="{{data.tabBar}}" wx:for-item="item" wx:key="tabBar">
+      <view class="tabBar-item">
+        <navigator open-type="redirect" url="{{item.pagePath}}" hover-class='none'>
+          <view><image class="icon" src='{{item.iconPath}}'></image></view>
+        </navigator>  
+      </view>
+    </block>
+  </view>
+</template>

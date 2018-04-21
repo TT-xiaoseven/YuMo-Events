@@ -1,0 +1,6 @@
+<!--pages/fail/fail.wxml-->
+<view class='pay_erro'>
+  <image src="../images/pay_erro.png"></image>
+  <text class='title'>支付失败</text>
+  <text class='tip'>点击左上角返回，重新支付</text>
+</view>

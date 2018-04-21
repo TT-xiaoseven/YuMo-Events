@@ -1,0 +1,110 @@
+/* pages/past/past.wxss */
+page{
+  background-color: #8f7e4f; 
+}
+
+.past{
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+	height: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item{
+	width: 690rpx;
+	height: 458rpx;
+	background: #fff;
+  box-shadow: rgba(0,0,0,0.06) 0 2rpx 4rpx;
+	border-radius: 10rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.item:active{
+  background: #fdfaf0;
+}
+
+.item .poster{
+  width: 690rpx;
+	height: 300rpx;
+}
+
+.item .title{
+  width: 650rpx;
+  line-height: 42rpx;
+	font-size: 36rpx;
+	color: #333333;
+  margin-top: 20rpx;
+  margin-left: 20rpx;  
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.item .box{
+  width: 100%;
+  height: 44rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.item .item1{
+  width: 490rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.item .item2{
+  width: 200rpx;
+  height: 60rpx;
+  display: flex;
+}
+
+.item .position{
+  width: 400rpx;
+	height: 22rpx;
+	font-size: 22rpx;
+	color: #606166;
+}
+
+.item .time{
+  width: 400rpx;
+	height: 22rpx;
+	font-size: 22rpx;
+	color: #9b9ea3;
+  margin-top: 10rpx;
+}
+
+.item .num{
+  width: 146rpx;
+  line-height: 24rpx;
+  text-align: right;
+	font-size: 24rpx;
+	color: #8f7e4f;
+  margin-top: 32rpx;
+  bottom: 0rpx;
+}
+
+.item .label{
+  width: 54rpx;
+  line-height: 22rpx;
+  text-align: right;
+	font-size: 22rpx;
+	color: #606166;
+  margin-top: 34rpx;
+  margin-right: 20rpx; 
+  bottom: 0rpx;
+}
+
+.logo-bottom{
+  width: 197rpx;
+	height: 70rpx;
+  margin-top: 60rpx;
+  margin-bottom: 60rpx;
+}

@@ -1,0 +1,64 @@
+<!--pages/sign/sign.wxml-->
+<view class="sign">
+  <image class="poster" src="{{imgUrl}}"></image>
+  <form bindsubmit="bindFormSubmit">
+    <text class="tip">填写报名信息</text>
+    <view class='box'>
+      <view class='item'>
+        <text class='label'>姓名</text>
+        <input placeholder='输入报名人姓名' name="name" value='{{name}}'></input>
+      </view>
+      <view class='item'>
+        <text class='label'>性别</text>
+        <radio-group name="sex" bindchange="sexRadioChange"> 
+          <view wx:for="{{sexItems}}" wx:key="key">
+            <label class="radio {{item.checked?'active':''}}">
+              <radio id="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></radio>
+              <image class='default' src="../images/radio.png"></image>
+              <image class='check' src="../images/radio_check.png"></image>
+              <text class="text" for="{{item.value}}">{{item.name}}</text>
+            </label>
+          </view>
+        </radio-group> 
+      </view>
+      <view class='item'>
+        <text class='label'>手机</text>
+        <input placeholder='输入报名人手机号码' name="phone" value='{{phone}}'></input>
+      </view>
+      <view class='item'>
+        <text class='label'>是否用餐</text>
+        <radio-group name="dinner" bindchange="dinnerRadioChange"> 
+          <view wx:for="{{dinnerItems}}" wx:key="key">
+            <label class="radio {{item.checked?'active':''}}">
+              <radio id="{{item.name}}" value="{{item.value}}" checked="{{item.checked}}"></radio>
+              <image class='default' src="../images/radio.png"></image>
+              <image class='check' src="../images/radio_check.png"></image>
+              <text class="text" for="{{item.value}}">{{item.name}}</text>
+            </label>
+          </view>
+        </radio-group> 
+      </view>
+    </view>
+    <text class="tip">详细信息(选填)</text>
+    <text class="tip-color">填写以下信息，可能会收到YU膳精美伴手礼呦~</text>
+    <view class='box'>
+      <view class='item'>
+        <text class='label'>所在地址</text>
+        <input placeholder='输入您所在的城市' name="city" value='{{city}}'></input>
+      </view>
+      <view class='item'>
+        <text class='label'>行业领域</text>
+        <input placeholder='输入您所在的行业领域' name="trade"  value='{{trade}}'></input>
+      </view>
+      <view class='item'>
+        <text class='label'>常用地址</text>
+        <input placeholder='输入可接收礼物的地址' name="address"  value='{{address}}'></input>
+      </view>
+    </view>
+    <button class='btn' formType="submit">立即报名</button>
+  </form>
+  <view class='logo-box'>
+    <image class='logo-bottom' src='../images/logo_bottom_deep.png'></image>
+  </view>
+</view>  
+

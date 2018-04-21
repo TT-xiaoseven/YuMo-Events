@@ -1,0 +1,200 @@
+/* pages/sign/sign.wxss */
+page{
+  background: #f8f4e8;
+}
+
+.sign{
+  -webkit-font-smoothing: antialiased;
+}
+
+.poster{
+  display: block;
+  width: 690rpx;
+  margin: 30rpx auto;
+  height: 300rpx;
+}
+
+.tip{
+  font-size: 32rpx;
+  color: #000000;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: 2rpx;
+  padding: 10rpx 0;
+}
+
+.tip-color{
+  font-size: 24rpx;
+  color: #8f7e4f;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: 2rpx;
+}
+
+.box{
+  background: #fff;
+  border-radius: 6rpx;
+  box-shadow: rgba(0,0,0,0.06) 0 2rpx 4rpx;
+  width: 690rpx;
+  margin: 20rpx auto 30rpx auto;
+  font-size: 28rpx;
+}
+
+.item{
+  display: flex;  
+  flex-direction: row;
+  height: 88rpx;
+  position: relative;
+}
+
+.item.last{
+  height: 154rpx;
+}
+
+.item:before{
+  position: absolute;
+  z-index: 1;
+  height: 2rpx;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 0;
+  background: #f5f5f5;
+  content: "";
+}
+
+.item:last-child:before{
+  display: none;
+}
+
+.item .label{
+  line-height: 88rpx;
+  height: 88rpx;
+  width: 160rpx;
+  position: absolute;
+  z-index: 1;
+  left: 30rpx;
+  top:0;
+}
+
+.icon{
+  width: 34rpx;
+  height: 34rpx;
+  top: 27rpx;
+  position: absolute;
+  z-index: 1;
+  right: 30rpx;
+}
+
+.item input{
+  line-height: 88rpx;
+  height: 88rpx;
+  width: 480rpx;
+  top: 0rpx;
+  position: absolute;
+  z-index: 1;
+  left: 190rpx;
+  padding-left: 20rpx;
+}
+
+.item textarea{
+  height: 124rpx;
+  box-sizing: border-box;
+  width: 450rpx;
+  top: 0rpx;
+  position: absolute;
+  z-index: 1;
+  left: 190rpx;
+  padding-left: 20rpx;
+  padding-top:30rpx;
+}
+
+.btn{
+  width: 690rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: block;
+  margin: 0 auto 30rpx auto;
+  text-align: center;
+  font-size: 34rpx;
+  background: #8f7e4f;
+  color: #fff;
+  box-shadow: 0px 2px 4px 0px 
+		rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
+}
+
+.btn:active{
+  background: #79611e;
+}
+
+radio{
+  display: none;
+}
+
+.radio image{
+  width: 26rpx;
+  height: 26rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+radio-group{
+  height: 88rpx;
+  width: 480rpx;
+  top: 0rpx;
+  position: absolute;
+  z-index: 1;
+  left: 190rpx;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+radio-group label{
+  height: 88rpx;
+  display: inline-block;
+  margin-right: 50rpx;
+}
+
+radio-group label text{
+  height: 88rpx;
+  line-height: 88rpx;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10rpx;
+  padding-right: 30rpx;
+}
+
+.radio .default{
+  display: inline-block;
+}
+
+.radio .check{
+  display: none;
+}
+
+.radio.active .default{
+  display: none;
+}
+
+.radio.active .check{
+  display: inline-block;
+}
+
+.logo-box{
+  width: 100%;
+  height: 140rpx;
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-box .logo-bottom{
+  width: 197rpx;
+	height: 70rpx;
+}

@@ -1,0 +1,2 @@
+<!--pages/review/review.wxml-->
+<web-view src="{{url}}"></web-view>

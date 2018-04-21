@@ -1,0 +1,65 @@
+<!--pages/info/info.wxml-->
+<view class="info">
+  <image class='poster' src='{{activity.titleImageUrl}}'></image> 
+  <view class='info-box'>
+    <text class='title'>{{activity.name}}</text>
+    <view class='view-box'>
+      <text class='short-time'>{{activity.shortTime}}</text>
+      <text class='view-num'>{{activity.visitCount}}</text>
+      <image class='view-icon' src='../images/view-icon.png'></image>
+    </view>  
+    <view class='long-line'></view>
+    <view class='item-box'>
+      <image class='normal-icon' src='../images/time-icon.png'></image>
+      <text class='label'>{{activity.activityTime}}</text> 
+    </view>
+    <view class='item-box' bindtap='bindLocationBtnTap' data-position='{{activity.position}}' bind:touchstart='onItemTouchStart' bind:touchend='onItemTouchEnd'>
+      <image class='higher-icon' src='../images/position-icon.png'></image>
+      <text class='label' style='color:{{itemStyle.color}}'>{{activity.location}}</text> 
+      <image class='arrow-icon' src='{{itemStyle.iconUrl}}'></image>
+    </view>
+    <view class='item-box'>
+      <image class='normal-icon' src='../images/people-icon.png' wx:if="{{activity.peopleLimit > 0}}"></image>
+      <text class='label' wx:if="{{activity.peopleLimit == 0}}">已报名{{activity.participantCount}}人/不限制名额</text> 
+      <text class='label' wx:if="{{activity.peopleLimit > 0}}">已报名{{activity.participantCount}}人/限{{activity.peopleLimit}}人报名</text> 
+    </view>
+    <view class='item-box'>
+      <image class='normal-icon' src='../images/price-icon.png'></image>
+      <text class='price-label' wx:if="{{activity.chargeType == 0}}">免费</text>    
+      <text class='price-label' wx:else>¥{{activity.activityFee}}</text>  
+      <!-- <image class='arrow-icon' src='../images/arrow-icon.png' wx:if="{{activity.chargeType != 0}}"></image> -->
+    </view>
+    <text class='description-label'>{{activity.description}}</text>
+  </view>
+  <view class='logo-box'>
+    <image class='logo-bottom' src='../images/logo_bottom_deep.png'></image>
+  </view>
+  <view class="{{isIpx?'button-box-ipx':'button-box'}}">
+    <button class='share-btn' open-type="share">
+      <view class='icon-box'>
+        <image class='share-icon' src='../images/share-icon.png'></image>
+      </view>
+      <text class='share-label'>分享</text> 
+    </button>
+    <view class='tip-btn' wx:if="{{!hasSignedUp && (activity.currentTime < activity.startTime)}}">
+      <text class='tip-label'>报名未开始</text>
+    </view>
+    <view class='tip-btn' wx:elif="{{!hasSignedUp && (activity.currentTime > activity.endTime)}}">
+      <text class='tip-label'>报名已结束</text>
+    </view>
+    <view class='tip-btn' wx:elif="{{!hasSignedUp && (activity.participantCount >= activity.peopleLimit)}}">
+      <text class='tip-label'>报名名额已满</text>
+    </view>
+    <view class='sign-btn' wx:elif="{{!hasSignedUp}}" bindtap='bindSignBtnTap' data-id="{{activity.id}}" data-url="{{activity.titleImageUrl}}" data-type="{{activity.chargeType}}">
+    <text class='sign-label'>我要报名</text>
+  </view>
+  <view class='sign-btn' wx:elif="{{activity.chargeType == 0 || hasPaid}}" bindtap='bindCancelBtnTap' data-id="{{activity.id}}">
+    <text class='sign-label'>取消报名</text>
+  </view>
+  <view class='sign-btn' wx:elif="{{!hasPaid}}" bindtap='bindPayBtnTap'>
+    <text class='sign-label'>继续支付</text>
+  </view> 
+  </view>
+</view>
+
+

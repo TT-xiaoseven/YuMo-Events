@@ -1,0 +1,27 @@
+/* pages/fail/fail.wxss */
+page{
+  background: #f8f4e8;
+}
+
+.pay_erro{
+  -webkit-font-smoothing: antialiased;
+}
+.pay_erro image{
+  display: block;
+  width: 148rpx;
+  height: 116rpx;
+  margin: 300rpx auto 30rpx auto;
+}
+.title{
+  text-align: center;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 15rpx;
+  font-size: 36rpx;
+}
+.tip{
+  text-align: center;
+  display: block;
+  font-size: 28rpx;
+  color: #888;
+}

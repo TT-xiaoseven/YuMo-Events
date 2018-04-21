@@ -1,0 +1,119 @@
+/* pages/share/share.wxss */
+page{
+  background: #f8f4e8;
+}
+.invitaton{
+  -webkit-font-smoothing: antialiased;
+}
+.box{
+  background: #8f7e4f;
+  position: fixed;
+  top: 20rpx;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 30rpx;
+  border-radius: 6rpx;
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+text{
+  display: block;
+  letter-spacing: 1rpx;
+  font-weight: 500;
+  line-height: 1;
+}
+.title{
+  display: block;
+  margin: 80rpx auto 60rpx auto;
+  width: 450rpx;
+  height: 444rpx;
+}
+
+.name{
+  font-size: 34rpx;
+  margin-bottom: 20rpx;
+}
+
+.tip{
+  font-size: 26rpx;
+  margin-bottom: 40rpx;
+}
+
+.item{
+  width: 550rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 100rpx;
+}
+
+.number{
+  font-size: 48rpx;
+  margin-bottom: 80rpx;
+}
+
+.info{
+  font-size: 26rpx;
+  margin-bottom: 15rpx;
+}
+
+.address{
+  width: 380rpx;
+  font-size: 26rpx;
+  margin-bottom: 15rpx;
+  text-decoration: underline;
+  text-align: left;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;  
+}
+
+.logo{
+  position: absolute;
+  display: block;
+  width: 196rpx;
+  height: 71rpx;
+  left: 40%;
+  margin-left: -17.5rpx;
+  bottom: 30rpx;
+}
+.corner_1{
+  position: absolute;
+  display: block;
+  width: 53rpx;
+  height: 60rpx;
+  left: 30rpx;
+  top: 30rpx;
+}
+.corner_2{
+  position: absolute;
+  display: block;
+  width: 53rpx;
+  height: 60rpx;
+  right: 30rpx;
+  top: 30rpx;
+}
+.corner_3{
+  position: absolute;
+  display: block;
+  width: 53rpx;
+  height: 60rpx;
+  right: 30rpx;
+  bottom: 30rpx;
+}
+.corner_4{
+  position: absolute;
+  display: block;
+  width: 53rpx;
+  height: 60rpx;
+  left: 30rpx;
+  bottom: 30rpx;
+}
+.tel{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 180rpx;
+  text-align: center;
+}

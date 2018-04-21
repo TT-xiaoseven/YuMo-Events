@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<import src="../templates/templates.wxml"/>
+<view class="{{isIpx?'events-ipx':'events'}}" hidden='{{!isLogin}}'>
+  <swiper class='swiper' duration="300" previous-margin='88rpx' next-margin='46rpx'  >
+    <block>
+      <swiper-item wx:for="{{activities}}" wx:key="item">
+        <view class="first_view" bindtap='bindItemBtnTap' data-id="{{item.id}}">
+          <view class='border_bg'>
+            <image class='poster' src='{{item.coverImageUrl}}'></image>   
+            <text class='title'>{{item.name}}</text>   
+            <view class='line'></view>    
+            <text class='description'>{{item.description}}</text>  
+            <view class='box'>
+              <view class='item1'>
+                <text class='position'>{{item.location}}</text>    
+                <text class='time'>{{item.activityTime}}</text> 
+              </view>
+              <view class='item2'>
+                <text class='price' wx:if="{{item.chargeType == 0}}">免费</text>    
+                <text class='price' wx:else>¥{{item.activityFee}}</text>  
+              </view> 
+            </view>
+          </view>  
+        </view>
+      </swiper-item>
+      <swiper-item hidden='{{!isCanShow}}'>
+        <view class='last_view'>
+          <image class='logo' src='../images/logo_big.png'></image> 
+          <button class='btn' bindtap='bindPastBtnTap'>往期精彩回顾</button>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  
+</view>
+<view class="{{isIpx?'tip-view-ipx':'tip-view'}}" hidden='{{isLogin}}'>
+  <image class='logo-tip' src='../images/logo_big.png'></image> 
+</view>
+<template is="tabBar" data="{{data:bindData}}"/> 
