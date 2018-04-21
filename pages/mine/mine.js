@@ -40,7 +40,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onShow: function (options) {
+  onLoad: function (options) {
     var that = this
     tabBar.tabbar("tabBar", that.data.isIpx, 1, that) //1表示第二个tabbar
     

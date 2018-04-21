@@ -51,14 +51,17 @@
       <text class='tip-label'>报名名额已满</text>
     </view>
     <view class='sign-btn' wx:elif="{{!hasSignedUp}}" bindtap='bindSignBtnTap' data-id="{{activity.id}}" data-url="{{activity.titleImageUrl}}" data-type="{{activity.chargeType}}">
-    <text class='sign-label'>我要报名</text>
-  </view>
-  <view class='sign-btn' wx:elif="{{activity.chargeType == 0 || hasPaid}}" bindtap='bindCancelBtnTap' data-id="{{activity.id}}">
-    <text class='sign-label'>取消报名</text>
-  </view>
-  <view class='sign-btn' wx:elif="{{!hasPaid}}" bindtap='bindPayBtnTap'>
-    <text class='sign-label'>继续支付</text>
-  </view> 
+      <text class='sign-label'>我要报名</text>
+    </view>
+    <view class='tip-btn' wx:elif="{{hasSignedUp && (participant.status == 2)}}">
+      <text class='tip-label'>申请退款中</text>
+    </view>
+    <view class='sign-btn' wx:elif="{{activity.chargeType == 0 || hasPaid}}" bindtap='bindCancelBtnTap' data-id="{{activity.id}}">
+      <text class='sign-label'>取消报名</text>
+    </view>
+    <view class='sign-btn' wx:elif="{{!hasPaid}}" bindtap='bindPayBtnTap'>
+      <text class='sign-label'>继续支付</text>
+    </view> 
   </view>
 </view>
 

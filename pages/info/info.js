@@ -2,6 +2,7 @@
 
 //hasSignedUp  true:已报名  false:未报名
 //hasPaid  true:已付款  false:未付款
+//participant.status  等待支付是0，已经支付是1，申请退款是2，已经退款是3
 
 const app = getApp()
 const infoUrl = require('../../config').infoUrl
@@ -121,8 +122,7 @@ Page({
       method: 'GET',
       success: function (res) {
         that.setData({
-          hasPaid: false,
-          hasSignedUp: false
+          participant: res.data.result,
         })
         console.log(res)
       },
