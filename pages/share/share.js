@@ -74,8 +74,15 @@ Page({
   * 返回活动主页
   */
   bindGoBackBtn: function (e) {
-    wx.navigateBack({
-      delta: 100
-    })      
+    var pages = getCurrentPages();  
+    if (pages.length == 1) {  
+      wx.redirectTo({  
+        url: '../activity/activity'
+      });  
+    } else {  
+      wx.navigateBack({
+        delta: 100
+      })  
+    }    
   }
 })
