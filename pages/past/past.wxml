@@ -1,12 +1,13 @@
 <!--pages/past/past.wxml-->
 <view class="past">
-  <view class='item' wx:for="{{activities}}" bindtap='bindItemBtnTap' data-url="{{item.activtyPageUrl}}">
+  <view class='item' wx:for="{{activities}}" wx:key="id">
+    <!--  bindtap='bindItemBtnTap' data-url="{{item.activtyPageUrl}}"> -->
     <image class='poster' src='{{item.titleImageUrl}}'></image> 
     <text class='title'>{{item.name}}</text> 
     <view class='box'>
       <view class='item1'>
         <text class='position'>{{item.location}}</text>    
-        <text class='time'>{{item.startTime}}</text>
+        <text class='time'>{{item.activityTime}}</text>
       </view>
       <view class='item2'>
         <!-- <text class='num'>{{item.arrivedCount}}人</text>
