@@ -29,7 +29,7 @@ App({
   /**
   * 获取用户信息
   */
-  getUserInfo: function (callback) {
+  getUserInfo1: function (callback) {
     var that = this
     var user = wx.getStorageSync('user') || {};
     var userInfo = wx.getStorageSync('userInfo') || {};
@@ -117,6 +117,49 @@ App({
                   }
                 }
               })
+            }
+          });
+        },
+        fail: function (err) {
+          console.log('获取用户登录态失败！' + loginRes.errMsg)
+          callback(err)
+        }
+      });
+    } else {
+      callback(null, user.openid)
+    }
+  },
+
+  /**
+  * 获取用户信息
+  */
+  getUserInfo: function (callback) {
+    var that = this
+    var user = wx.getStorageSync('user') || {};
+    var userInfo = wx.getStorageSync('userInfo') || {};
+    if ((!user.openid || (user.expires_in || Date.now()) < (Date.now() + 600)) && (!userInfo.nickName)) {
+      wx.login({
+        success: function (loginRes) {
+          console.log('用户登录成功code=' + loginRes.code)
+          var l = openidUrl + '?code=' + loginRes.code
+          console.log('授权请求：' + l)
+          wx.request({
+            url: l,
+            data: {},
+            method: 'GET',
+            success: function (openRes) {
+              console.log(openRes.data)
+              var obj = {}
+              obj.openid = openRes.data.result.openid
+              obj.expires_in = Date.now() + openRes.data.result.expires_in
+              obj.token = openRes.data.result.token
+              obj.vipCode = openRes.data.result.vipCode
+              wx.setStorageSync('user', obj)//存储openid
+              console.log(obj.openid)
+              callback(null, obj.openid)
+            },
+            complete: function (openRes) {
+              console.log('获取用户信息请求结束:', openRes)
             }
           });
         },

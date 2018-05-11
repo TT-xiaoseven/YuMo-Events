@@ -46,6 +46,8 @@ page{
   float: right;
   margin-top: 50rpx;
   margin-right: 50rpx;
+  display: block;
+  overflow: hidden;
 }
 
 .label{

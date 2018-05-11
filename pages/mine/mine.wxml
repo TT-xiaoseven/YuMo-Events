@@ -2,8 +2,8 @@
 <import src="../templates/templates.wxml"/>
 <scroll-view scroll-y class="{{isIpx?'mine-ipx':'mine'}}" hidden='{{!isLogin}}'>
   <view class='info'>
-    <text class='nick-name'>{{userInfo.nickName}}</text>
-    <image class='head-img' src="{{(userInfo != null) ? userInfo.avatarUrl : '默认图片'}}"></image>
+    <open-data class="nick-name" type="userNickName"></open-data>
+    <open-data class='head-img' type="userAvatarUrl"></open-data>
   </view>
   <view class='label'>
     <view class='bold-line'></view>
