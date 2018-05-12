@@ -18,12 +18,12 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    that.setData({
-      user: wx.getStorageSync('user'),
-      userInfo: wx.getStorageSync('userInfo')
-    })
     app.getUserInfo(function (err, openid) {
       if (!err) {
+        that.setData({
+          user: wx.getStorageSync('user'),
+          userInfo: wx.getStorageSync('userInfo')
+        })
         var l = endUrl + '?token=' + that.data.user.token
         console.log(l)
         wx.request({

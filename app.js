@@ -43,7 +43,6 @@ App({
             success: function (firstRes) {
               console.log('获取用户信息成功' + firstRes.userInfo)
               wx.setStorageSync('userInfo', firstRes.userInfo)//存储userInfo  
-              
               wx.request({
                 url: l,
                 data: {},
@@ -155,7 +154,7 @@ App({
               obj.token = openRes.data.result.token
               obj.vipCode = openRes.data.result.vipCode
               wx.setStorageSync('user', obj)//存储openid
-              console.log(obj.openid)
+              console.log(obj.token)
               callback(null, obj.openid)
             },
             complete: function (openRes) {
