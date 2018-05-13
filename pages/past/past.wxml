@@ -1,7 +1,6 @@
 <!--pages/past/past.wxml-->
 <view class="past">
-  <view class='item' wx:for="{{activities}}" wx:key="id">
-    <!--  bindtap='bindItemBtnTap' data-url="{{item.activtyPageUrl}}"> -->
+  <view class='item' wx:for="{{activities}}" wx:key="id" bindtap='bindItemBtnTap' data-url="{{item.activityPageUrl}}">
     <image class='poster' src='{{item.titleImageUrl}}'></image> 
     <text class='title'>{{item.name}}</text> 
     <view class='box'>
